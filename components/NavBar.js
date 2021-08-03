@@ -1,7 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
+import { useRouter } from 'next/router'
+
+
 function NavBar() {
+    const router = useRouter()
+    const isActive = (r) => {
+        if (r === router.pathname) {
+            return " active"
+        } else {
+            return ""
+        }
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></Script>
@@ -15,16 +26,16 @@ function NavBar() {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
                         <Link href="/cart">
-                            <a className="nav-link"><i className="fas fa-shopping-cart"></i>Cart</a>
+                            <a className={"nav-link" + isActive("/cart")}><i className="fas fa-shopping-cart"></i>Cart</a>
                         </Link>
                     </li>
-                    <li className="nav-item active">
+                    <li className="nav-item">
                         <Link href="/signin">
-                            <a className="nav-link"><i className="fas fa-user"></i>Sign in</a>
+                            <a className={"nav-link" + isActive("/signin")}><i className="fas fa-user"></i>Sign in</a>
                         </Link>
                     </li>
 

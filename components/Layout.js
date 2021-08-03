@@ -2,10 +2,11 @@ import React, { Children } from 'react'
 import NavBar from './NavBar'
 
 
-function Layout() {
+function Layout({ children }) {
     return (
-        <div>
+        <div className="container">
             <NavBar />
+            {children}
         </div>
     )
 }
