@@ -15,10 +15,6 @@ function NavBar() {
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></Script>
-            <Script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></Script>
-            <Script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></Script>
-            <Script src="https://kit.fontawesome.com/a076d05399.js"></Script>
             <Link href="/">
                 <a className="navbar-brand" >Độc Shop</a>
             </Link>
