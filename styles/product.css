@@ -1,0 +1,22 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  justify-content: center;
+  margin: 20px 0;
+}
+.products .card {
+  margin: 10px auto;
+}
+.products .card-img-top {
+  height: 250px;
+  width: 100%;
+}
+.products .card-text {
+  height: 120px;
+}
+
+/* --------- Detail Product ----------- */
+.detail_page .img-thumbnail.active {
+  border-color: orangered;
+  padding: 2px;
+}

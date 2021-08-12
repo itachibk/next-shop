@@ -26,8 +26,6 @@ export const postData = async (url, post, token) => {
     return data
 }
 
-
-
 export const putData = async (url, post, token) => {
     const res = await fetch(`${baseUrl}/api/${url}`, {
         method: 'PUT',
